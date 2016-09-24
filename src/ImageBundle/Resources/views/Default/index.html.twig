@@ -1,1 +1,8 @@
-Hello World!
+{% extends '::base.html.twig' %}
+{% block body %}
+    <form action="{{path('create_imagen')}}" enctype="multipart/form-data" method="post"    >
+        <div class="slim" style="width: 30em; height: 9em;"></div>
+
+        <input type="submit" value="Upload" style="margin-top: 1em;">
+    </form>
+{% endblock %}

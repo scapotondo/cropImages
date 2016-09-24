@@ -1,4 +1,4 @@
 services:
-#    image.example:
-#        class: ImageBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
+    subirImagen:
+        class: ImageBundle\Service\Slim
+        arguments: [@service_container, @doctrine.orm.entity_manager]
