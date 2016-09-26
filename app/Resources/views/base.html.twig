@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <title>{% block title %}Prueba{% endblock %}</title>
     {% block stylesheets %}
-        <link href="{{ asset('bundles/ImageBundle/css/slim.min.css') }}" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="{{ asset('bundles/image/css/slim.min.css') }}" rel="stylesheet" type="text/css" media="screen"/>
     {% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
     {% block body %}{% endblock %}
     {% block javascripts %}
-        <script type="text/javascript" src="{{ asset('bundles/ImageBundle/js/slim.kickstart.min.js') }}" ></script>
+        <script type="text/javascript" src="{{ asset('bundles/image/js/slim.kickstart.min.js') }}" ></script>
     {% endblock %}
     </body>
 </html>
