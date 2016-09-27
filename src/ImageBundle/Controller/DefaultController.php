@@ -17,8 +17,11 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-
-        return $this->render('ImageBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $imagenes = $em->getRepository('ImageBundle:Imagen')->findAll();
+        return $this->render('ImageBundle:Default:index.html.twig', array(
+            'imagenes' => $imagenes
+        ));
     }
 
     /**

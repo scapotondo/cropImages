@@ -1,5 +1,9 @@
 {% extends '::base.html.twig' %}
 {% block body %}
+    {% for imagen in imagenes %}
+        <span>{{ imagen.nombre }}</span>
+        <img src="{{ asset('images/' ~  imagen.nombre )}}" alt="" style="height: 2em; width: 2em;">
+    {% endfor %}
     <form action="{{path('create_imagen')}}" enctype="multipart/form-data" method="post"    >
         <div class="slim" style="width: 30em; height: 9em;"></div>
 
